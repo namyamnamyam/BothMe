@@ -3,8 +3,24 @@
 .hero h1 em{display:inline-block;padding-inline:.06em;font-family:'Noto Sans KR',system-ui,sans-serif;font-style:italic;line-height:1.08}
 .academy-main{min-height:180px;display:flex;align-items:center}
 .academy-main .lead{margin:0}
-.character-card{cursor:pointer;display:flex;flex-direction:column;outline:none}
+.character-card{cursor:pointer;display:flex;flex-direction:column;outline:none;overflow:hidden}
 .character-card:focus-visible{border-color:var(--gold-soft);box-shadow:0 0 0 2px rgba(240,217,146,.18)}
+.character-card::before{content:'';display:block;width:auto;aspect-ratio:4/3;margin:-26px -26px 22px;background-position:center top;background-size:cover;background-repeat:no-repeat;border-bottom:1px solid var(--line);flex:none}
+.character-card:nth-child(1)::before{background-image:url('images/characters/seraphina-lumenheim.webp')}
+.character-card:nth-child(2)::before{background-image:url('images/characters/elena-frostheim.webp')}
+.character-card:nth-child(3)::before{background-image:url('images/characters/serena-astra.webp')}
+.character-card:nth-child(4)::before{background-image:url('images/characters/elysia-silvaren.webp')}
+.character-card:nth-child(5)::before{background-image:url('images/characters/levia-nightfall.webp')}
+.character-card:nth-child(6)::before{background-image:url('images/characters/aurelia-von-arcadius.webp')}
+.character-card:nth-child(7)::before{background-image:url('images/characters/serene-aquaris.webp')}
+.character-card:nth-child(8)::before{background-image:url('images/characters/kylen-wolfhart.webp')}
+.character-card:nth-child(9)::before{background-image:url('images/characters/mortea.webp')}
+.character-card:nth-child(10)::before{background-image:url('images/characters/valka.webp')}
+.character-card:nth-child(11)::before{background-image:url('images/characters/nephira.webp')}
+.character-card:nth-child(12)::before{background-image:url('images/characters/casian.webp')}
+.character-card:nth-child(13)::before{background-image:url('images/characters/luna-bloodheart.webp')}
+.character-card:nth-child(14)::before{background-image:url('images/characters/elia-clasier.webp')}
+.character-card:nth-child(15)::before{background-image:url('images/characters/rimua-velluce.webp')}
 .character-card::after{content:'상세 보기  ↗';display:block;margin-top:auto;padding-top:16px;color:#6f6b72;font-size:.72rem;letter-spacing:.04em}
 .character-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:28px;background:rgba(4,4,7,.82);backdrop-filter:blur(12px)}
 .character-modal.open{display:flex}
@@ -25,6 +41,7 @@ body.modal-open{overflow:hidden}
 @media (max-width:720px){
   .hero-content{padding-inline:8px}
   .hero h1{font-size:clamp(2.75rem,13vw,4.6rem);line-height:1.1;padding-inline:.04em}
+  .character-card::before{margin:-26px -26px 18px}
   .character-modal{padding:14px}
   .character-modal-panel{padding:32px 22px 26px;max-height:88vh}
 }
